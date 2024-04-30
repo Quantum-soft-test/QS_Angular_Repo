@@ -12,9 +12,17 @@ export class LoginComponent
 
   email: string ="";
   password : string="";
-  
+  passwordType: string = 'password';
 
   constructor( private router: Router,private http: HttpClient) { 
+  }
+
+  changePassType() {
+    if(this.passwordType === 'password') {
+      this.passwordType = 'text'
+    } else {
+      this.passwordType = 'password';
+    }
   }
 
  Login()

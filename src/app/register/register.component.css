@@ -1,0 +1,41 @@
+.row-wrapper {
+    padding: 20px;
+    margin: auto;
+}
+
+.reg-card {
+    width: 50%;
+    margin: auto;
+    background: #d5cdcd66;
+    border: 3px solid #d5cdcd66
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+label {
+    margin-left: 3px;
+    margin-bottom: 4px;
+}
+
+.title {
+    margin: 10px 30px -4px;
+    font-size: 26px;
+    text-transform: uppercase
+}
+
+.reg-button {
+    margin-bottom: 12px;
+    margin-left: 32px;
+}
+
+.eye-icon {
+    background: white;
+    position: absolute;
+    right: 0;
+    border-left: 0px;
+    z-index: 99;
+    cursor: pointer;
+    margin-left: 10px;
+}

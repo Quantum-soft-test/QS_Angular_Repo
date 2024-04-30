@@ -1,23 +1,26 @@
-
 <div class="container mt-4">
-    <div class="card">
-      <h1>Employee Login</h1>
-  <form>
+  <div class="card">
+    <h1>Employee Login</h1>
+    <form>
       <div class="form-group">
         <label>Email</label>
-        <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Enter name">
+        <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control"
+          placeholder="Enter name">
       </div>
-    
+
       <div class="form-group">
         <label>password</label>
-        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="name" placeholder="Enter password">
+        <input [type]="passwordType" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control"
+          id="name" placeholder="Enter password" aria-describedby="eye-icon">
       </div>
-    
-            <button type="submit" class="btn btn-primary" (click)="Login()">submit</button>
+      <span id="eye-icon">
+        <!-- <i class="bi bi-eye"></i>  -->
+        <p (click)="changePassType()">Change</p>
+      </span>
+      <button type="submit" class="btn btn-primary" (click)="Login()">submit</button>
 
-        
-            <!-- <button type="submit" class="btn btn-primary" (click)="Login()">New Registration</button> -->
+      <!-- <button type="submit" class="btn btn-primary" (click)="Login()">New Registration</button> -->
 
     </form>
   </div>
-  </div>
+</div>

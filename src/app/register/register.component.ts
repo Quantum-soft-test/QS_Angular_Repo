@@ -14,9 +14,17 @@ export class RegisterComponent {
   name: string = "";
   useremail: string = "";
   password: string = "";
-
+  passwordType: string = 'password';
   constructor(private http: HttpClient) {
 
+  }
+
+  changePassType() {
+    if(this.passwordType === 'password') {
+      this.passwordType = 'text'
+    } else {
+      this.passwordType = 'password';
+    }
   }
   save() {
 
