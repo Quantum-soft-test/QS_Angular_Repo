@@ -6,20 +6,20 @@
       <div class="row row-wrapper">
         <div class="form-group col-md-12">
           <label>Name</label>
-          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" id="name"
+          <input type="text" required [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" id="name"
             placeholder="Enter name">
         </div>
 
         <div class="form-group col-md-12">
           <label>Email</label>
-          <input type="useremail" [(ngModel)]="useremail" [ngModelOptions]="{standalone: true}" class="form-control"
+          <input type="useremail" required [(ngModel)]="useremail" [ngModelOptions]="{standalone: true}" class="form-control"
             id="useremail" placeholder="example@gmail.com">
         </div>
 
         <div class="form-group col-md-12">
-          <label>password</label>
+          <label>Password</label>
           <div class="input-group">
-            <input [type]="passwordType" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+            <input [type]="passwordType" required [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
               class="form-control" id="password" placeholder="Enter password" aria-describedby="eye-icon">
             <span *ngIf="password.length > 0" class="input-group-text eye-icon" id="eye-icon">
               <i [class]="passwordType === 'text' ? 'bi bi-eye' : 'bi bi-eye-slash'" (click)="changePassType()"></i>
@@ -27,7 +27,17 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary row reg-button" (click)="save()">Register</button>
+      <div class="button-wrapper">
+        <button type="submit" class="btn btn-primary row reg-button" (click)="save()">Register</button>
+        <span class="login-wrapper">
+          <p class="login-text">Alredy Register? </p>
+          <a class="login-link" (click)=navigateToLogin()>Login</a>
+
+
+        </span>
+
+      </div>
+
     </form>
   </div>
 </div>

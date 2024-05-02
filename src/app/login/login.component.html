@@ -13,10 +13,7 @@
         <input [type]="passwordType" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control"
           id="name" placeholder="Enter password" aria-describedby="eye-icon">
       </div>
-      <span id="eye-icon">
-        <!-- <i class="bi bi-eye"></i>  -->
-        <p (click)="changePassType()">Change</p>
-      </span>
+      
       <button type="submit" class="btn btn-primary" (click)="Login()">submit</button>
 
       <!-- <button type="submit" class="btn btn-primary" (click)="Login()">New Registration</button> -->

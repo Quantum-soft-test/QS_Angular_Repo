@@ -22,12 +22,28 @@ label {
 .title {
     margin: 10px 30px -4px;
     font-size: 26px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
-.reg-button {
-    margin-bottom: 12px;
-    margin-left: 32px;
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 44px 15px
+}
+
+.login-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.login-text {
+    margin: auto;
+    margin-right: 10px;
+}
+
+.login-link {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .eye-icon {

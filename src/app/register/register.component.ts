@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -10,25 +11,28 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class RegisterComponent {
-
   name: string = "";
   useremail: string = "";
   password: string = "";
   passwordType: string = 'password';
-  constructor(private http: HttpClient) {
 
-  }
+
+  constructor(private http: HttpClient, private _router: Router) { }
 
   changePassType() {
-    if(this.passwordType === 'password') {
+    if (this.passwordType === 'password') {
       this.passwordType = 'text'
     } else {
       this.passwordType = 'password';
     }
   }
-  save() {
 
-    let bodyData = {
+  navigateToLogin() {
+    return this._router.navigateByUrl('/')
+  }
+
+  save() {
+    const bodyData = {
       "name": this.name,
       "qsuser": {
         "useremail": this.useremail,
