@@ -1,0 +1,24 @@
+.card {
+    width: 50%;
+    margin: auto;
+    background: #d5cdcd66;
+    border: 3px solid #d5cdcd66
+}
+
+/* .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 44px 15px
+} */
+.form-group {
+    margin-bottom: 5px;
+}
+.eye-icon {
+    background: white;
+    position: absolute;
+    right: 0;
+    border-left: 0px;
+    z-index: 99;
+    cursor: pointer;
+    margin-left: 10px;
+}
